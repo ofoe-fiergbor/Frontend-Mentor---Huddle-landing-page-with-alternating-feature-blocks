@@ -1,0 +1,27 @@
+// PRIMARY COLOR
+
+$PINK : hsl(322, 100%, 66%);
+
+//NEAUTRAL
+
+$VERY_PALE_CYAN: hsl(193, 100%, 96%);
+$VERY_DARK_CYAN: hsl(192, 100%, 9%);
+$GRAYISH_BLUE: hsl(208, 11%, 55%);
+
+// BODY FONT FAMILY
+
+$FONT_FAMILY: 'Open Sans', sans-serif;
+
+// HEADING FONT FAMILY
+
+$HEADING_FONT_FAMILY: 'Poppins', sans-serif;
+
+@mixin FLEXBOX($flexdirection, $justifyContent, $alignItem) {
+    display: flex;
+    flex-direction: $flexdirection;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+@mixin SECTION-PADDING {
+    padding: 0 5%;
+}

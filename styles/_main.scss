@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-size: 18px;
+  font-family: $FONT_FAMILY;
+  .bg {
+    position: relative;
+    z-index: -99;
+    img {
+      background-color: $VERY_PALE_CYAN;
+      height: 85vh;
+      &:first-child {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  section {
+    width: 100%;
+    @include SECTION-PADDING;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  body {
+    .bg {
+      img {
+      height: 105vh;
+
+        &:first-child {
+          display: none;
+        }
+        &:nth-child(2) {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          right: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

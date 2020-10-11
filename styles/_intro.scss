@@ -1,0 +1,64 @@
+.intro {
+  @include FLEXBOX(row, space-between, center);
+  color: $VERY_DARK_CYAN;
+  .intro_text_container {
+    height: 50vh;
+    padding-top: 5%;
+    h1 {
+      font-family: $HEADING_FONT_FAMILY;
+      font-size: 40px;
+      padding-right: 30%;
+      margin-bottom: 4%;
+    }
+    p {
+      padding-right: 25%;
+    }
+    button {
+      width: 35%;
+      height: 15%;
+      border: none;
+      border-radius: 25px;
+      font-weight: 700;
+      color: #fff;
+      background-color: $PINK;
+      margin-top: 5%;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        filter: brightness(120%) saturate(120%);
+      }
+    }
+  }
+  img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .intro {
+    @include FLEXBOX(column, center, center);
+    text-align: center;
+    .intro_text_container {
+      h1 {
+        // background: #000;
+        padding: 0;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      p{
+          padding: 0;
+      }
+      button{
+          width: 80%;
+          margin-top: 2em;
+      }
+    }
+    img{
+        width: 100%;
+    }
+  }
+
+
+
+
+}
